@@ -1,0 +1,35 @@
+ACT AS A SENIOR QUANTITATIVE DEVELOPER & SYSTEM ARCHITECT.
+
+**PROJECT:** "ArbHunter" - A local, high-frequency Crypto Arbitrage Scanner.
+**GOAL:** Detect price discrepancies between Binance, MEXC, and KuCoin in real-time and visualize them on a desktop dashboard.
+
+**TECH STACK (NON-NEGOTIABLE):**
+1. **Backend:** Python 3.12 + FastAPI + CCXT (Crypto library) + Asyncio.
+2. **Frontend:** Flutter (Desktop Target: Windows/MacOS).
+3. **State Management:** Riverpod.
+4. **Communication:** WebSockets (FastAPI sends live opportunities to Flutter).
+
+**SYSTEM ARCHITECTURE (The Heavy Lifting):**
+
+### 1. THE PYTHON ENGINE (`/backend`)
+- **ExchangeManager:** A robust class using `ccxt.async_support`. It must connect to public APIs of Binance, MEXC, and KuCoin.
+- **MarketScanner:** An async loop that fetches the top 50 pairs (e.g., BTC/USDT, ETH/USDT, SOL/USDT) every 3 seconds concurrently.
+- **ArbCalculator:** The logic core.
+  - Formula: `Profit % = ((HigherPrice - LowerPrice) / LowerPrice) * 100`
+  - **CRITICAL:** Include a hardcoded 'Taker Fee' deduction (assume 0.1% per trade, so 0.2% total). Only flag opportunities > 0.5% net profit.
+- **WebSocket Broadcaster:** Stream a JSON object to the frontend whenever an opportunity is found.
+
+### 2. THE FLUTTER DASHBOARD (`/frontend`)
+- **Theme:** "Bloomberg Dark Terminal" aesthetic. Black background, neon green numbers, monospaced fonts.
+- **Components:**
+  - **Live Ticker Tape:** A scrolling row at the top showing major coin prices.
+  - **The Opportunity Grid:** A DataGrid showing: [Coin Pair] | [Buy At (Exchange A)] | [Sell At (Exchange B)] | [Net Profit %] | [Action Button].
+  - **Sound Alert:** Play a subtle 'ping' sound when profit > 1%.
+
+**DEVELOPMENT TASKS:**
+1. Setup the full project structure (frontend/backend folders).
+2. Create the `requirements.txt` (include `ccxt`, `fastapi`, `uvicorn`, `websockets`) and `pubspec.yaml`.
+3. Write the complete `main.py` for FastAPI with the async scraping logic.
+4. Write the Flutter UI code with a real WebSocket connection handling logic.
+
+**STRICT INSTRUCTION:** Do not write comments like "// Add logic here". Write the ACTUAL production-ready code for handling the CCXT fetch and the arbitrage math.

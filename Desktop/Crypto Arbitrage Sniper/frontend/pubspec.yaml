@@ -1,0 +1,26 @@
+name: arbhunter
+description: Crypto Arbitrage Scanner - Bloomberg Terminal Style Dashboard
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  flutter_riverpod: ^2.5.1
+  web_socket_channel: ^2.4.0
+  data_table_2: ^2.5.15
+  audioplayers: ^4.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/sounds/.gitkeep
