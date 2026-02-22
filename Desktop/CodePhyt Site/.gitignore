@@ -1,0 +1,7 @@
+
+# WhatsApp Web JS
+.wwebjs_auth/
+.wwebjs_cache/
+
+solana-termux-node/.wwebjs_auth/
+solana-termux-node/.wwebjs_cache/

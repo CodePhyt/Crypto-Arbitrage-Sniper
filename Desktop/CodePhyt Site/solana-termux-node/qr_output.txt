@@ -1,0 +1,12 @@
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ÔÜÖ´©Å  load multiple .env files with { path: ['.env.local', '.env'] }
+­ƒÜÇ Initiating Solana Termux Node (Zero Trust Bridge)...
+Ô£à WhatsApp Bridge Online. Routing active.
+ÔÅ▒´©Å Starting Web Sync Polling every 10s...
+[WEB SYNC ERROR] Failed to poll Vercel: getaddrinfo ENOTFOUND codephyt.com
+[WEB SYNC ERROR] Failed to poll Vercel: getaddrinfo ENOTFOUND codephyt.com
+[WEB SYNC ERROR] Failed to poll Vercel: getaddrinfo ENOTFOUND codephyt.com
+[WEB SYNC ERROR] Failed to poll Vercel: getaddrinfo ENOTFOUND codephyt.com
+[WEB SYNC ERROR] Failed to poll Vercel: getaddrinfo ENOTFOUND codephyt.com
+[WEB SYNC ERROR] Failed to poll Vercel: getaddrinfo ENOTFOUND codephyt.com
+[WEB SYNC ERROR] Failed to poll Vercel: getaddrinfo ENOTFOUND codephyt.com
+[WEB SYNC ERROR] Failed to poll Vercel: getaddrinfo ENOTFOUND codephyt.com
