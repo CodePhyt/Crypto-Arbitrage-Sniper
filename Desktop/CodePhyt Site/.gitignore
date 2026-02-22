@@ -5,3 +5,7 @@
 
 solana-termux-node/.wwebjs_auth/
 solana-termux-node/.wwebjs_cache/
+
+ares-whatsapp-node/.wwebjs_auth/
+ares-whatsapp-node/.wwebjs_cache/
+ares-whatsapp-node/node_modules/
